@@ -1,0 +1,46 @@
+.App{
+  text-align: left;
+  padding: 15px 50px;
+  background:#eae5ef;
+  height:100vh;
+  
+  h1{
+    font-size:30px;
+    margin:5px 5px 10px;
+    font-weight:bold;
+  }
+  button{
+    background:transparent;
+    border:none;
+    cursor:pointer;
+  }
+}
+.box__input{
+  display:flex;
+  justify-content:space-between;
+}
+.input__add{
+  padding:5px;
+  width:85%;
+  border-radius:5px;
+  border-width:1px;
+}
+.btn__add{
+  padding:8px 10px;
+  font-size:24px;
+}
+.box__list{
+  li{
+    display:flex;
+    justify-content:space-between;
+    align-items: baseline;
+    padding:8px;
+    margin:5px 0;
+    border-bottom:1px solid #555;
+    p{
+      text-align:left;
+      width:80%;
+      line-height:20px;
+    }
+  }
+}
