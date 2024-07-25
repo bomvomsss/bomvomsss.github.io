@@ -1,46 +1,81 @@
-.App{
-  text-align: left;
-  padding: 15px 50px;
-  background:#eae5ef;
-  height:100vh;
-  
-  h1{
-    font-size:30px;
-    margin:5px 5px 10px;
-    font-weight:bold;
+* {margin: 0;padding: 0;box-sizing:border-box;}
+body {margin: 0;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+code {font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;}
+ol,ul,li {list-style: none;}
+.App {display: -webkit-flex;display: -ms-flex;display: flex;flex-direction: column;justify-content: center;align-items: center;height: 100vh;background: #eee;}
+.box__head {
+  width:350px;margin-bottom:15px;
+  h1 {
+    position: relative;font-size: 42px;color: #903dad;display: inline-block;min-width:170px;
+    &::before{
+      content: "TODO LIST";position: absolute;top: 0.15rem;left: 2.8rem;color: transparent;-webkit-text-stroke: 0.1rem #a770a9;
+    }
   }
-  button{
-    background:transparent;
-    border:none;
-    cursor:pointer;
+  .subtitle{
+    color:#999;
+    padding:0 10px 10px;
   }
 }
-.box__input{
-  display:flex;
-  justify-content:space-between;
+.box__list {
+  position: relative;width: 350px;height: 500px;
+  &::before{
+    content: '';position: absolute;top: 10px;right: -10px;box-sizing: border-box;width: 100%;height: 100%;background: #c6a6d37d;border-radius: 10px;z-index: 0;
+  }
 }
-.input__add{
-  padding:5px;
-  width:85%;
-  border-radius:5px;
-  border-width:1px;
-}
-.btn__add{
-  padding:8px 10px;
-  font-size:24px;
-}
-.box__list{
-  li{
-    display:flex;
-    justify-content:space-between;
-    align-items: baseline;
-    padding:8px;
-    margin:5px 0;
-    border-bottom:1px solid #555;
-    p{
-      text-align:left;
-      width:80%;
-      line-height:20px;
+.listBox {display: flex;flex-direction: column;position: relative;padding: 20px;height: 100%;border: 2px solid #555;background: #fff;border-radius: 10px;z-index: 1;}
+.note {margin-bottom: 10px;color:#c6a6d3;}
+.checkIcon {position: relative;display: inline-block;vertical-align: top;width: 14px;height: 14px;border: 1px solid #333;background: #fff;border-radius: 3px;}
+input:checked ~ .checkIcon {background: #903dad;}
+input:checked ~ .checkIcon:before {content: '';position: absolute;top: 50%;left: 50%;margin-top: -4px;margin-left: -4px;width: 6px;height: 3px;border-left: 2px solid #fff;border-bottom: 2px solid #fff;transform: rotate(-45deg);}
+.todoListBox {
+  display: flex;flex-direction: column;flex: 1;min-height: 0;
+  ul {  flex: 1;margin-right: -20px;padding-right: 20px;overflow-y: auto;
+    li{
+      display: -webkit-flex;display: -ms-flex;display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #c6a6d3;
+      label{
+        display: -webkit-flex;display: -ms-flex;display: flex;align-items: center;min-width: 0;height: 30px;
+      }
+      input[type='checkbox']{
+        position: absolute;top: 0;left: 0;opacity: 0;
+      }
+      .checkIcon{
+        flex-shrink: 0;margin-right: 7px;
+      }
+      .box__txt{
+        overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+      }
+      .btn__del{
+        flex-shrink: 0;position: relative;width: 20px;height: 20px;border: 0;background: none;font-size: 0;color: transparent;
+        &::before{
+          content: '';position: absolute;top: 50%;left: 50%;margin-left: -6px;width: 12px;height: 1px;background: #903dad;transform: rotate(45deg);
+        }
+        &::after{
+          content: '';position: absolute;top: 50%;left: 50%;margin-left: -6px;width: 12px;height: 1px;background: #903dad;transform: rotate(-45deg);
+        }
+      }
     }
   }
 }
+.box__input {
+  position: relative;margin-top: 20px;
+  .input__add {
+    display: inline-block;padding: 0 37px 0 13px;width: 100%;height: 35px;border:.5px solid #c6a6d3;background: none;border-radius: 20px;
+    &::-webkit-input-placeholder{
+      color:#c6a6d3;
+    }
+  }
+  .btn__add {
+    position: absolute;top: 50%;right: 5px;margin-top: -13px;width: 26px;height: 26px;border: 0;background: #903dad;border-radius: 50%;text-align: center;font-size: 0;color: transparent;overflow: hidden;
+    .arrowIcon{
+      position: relative;display: inline-block;vertical-align: top;margin-top: -1px;width: 10px;height: 2px;background-color: #fff;transition: all ease .5s;
+      &::before{
+        content: '';position: absolute;top: -3px;right: 0;width: 6px;height: 6px;border-top: solid 2px #fff;border-right: solid 2px #fff;-webkit-transform: rotate(45deg);transform: rotate(45deg);
+      }
+    }
+    &:hover .arrowIcon{
+      transform: translateX(20px);animation: moveRight .9s ease infinite;animation-delay: .5s;
+    }
+  }
+}
+
+@keyframes moveRight {0% {transform: translateX(-20px);}100% {transform: translateX(20px);}}
