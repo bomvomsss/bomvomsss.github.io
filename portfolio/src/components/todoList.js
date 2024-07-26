@@ -1,15 +1,27 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Create from './todoCreate'
+import todoData from '../data.js'
 
 function List(){
   const [input, setInput] = useState('');
-  const [list, setList] = useState([]);
+  const [list, setList] = useState([...todoData]);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editCont, setEditCont] = useState(todoData.content);
+  const [done, setDone] = useState(false);
+
+  const idNum = useRef(3);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let newTodo = {
+      id : idNum.current++, // 1씩 증가
+      content : input,
+      done : false,
+    };
     if(input.trim() !== ''){
-      setList([...list, input]);
+      setList((prev) => [...prev, newTodo]);
       setInput('');
+      console.log(newTodo.id)
     }
   };
   // 투두 등록
@@ -21,34 +33,53 @@ function List(){
   }
   // 투두 삭제
 
-  const initialItems = [
-    {
-      id : 1, 
-      content : '책상 청소',
-      done : 'true' 
-    },
-    { id : 2, content : '플레이리스트 바꾸기', done : 'true' },
-    { id : 3, content : '어제 공부한 거 복습하기', done : 'false' },
-    { id : 4, content : '책 읽기', done : 'false' },
-  ]
+  const handleEdit = (e) => {
+    setEditCont(e.target.value)
+  }
 
-  return(
-    <div className='todoListBox'>
-      <ul>
-        {list.map((item, i) => (
-          <li key={i} className='listItem'>
-            <label>
-              <input type="checkbox" />
-              <span className='checkIcon'></span>
-              <span className='box__txt'>{item}</span>
-            </label>
-            <button type='button' className='btn__del' onClick={()=>handleDelete(i)}>삭제</button>
-          </li>
-        ))}
-      </ul>
-      <Create input={input} setInput={setInput} handleSubmit={handleSubmit}/>
-    </div>
-  )
-}
+
+  if(isEditing){
+    return(
+      <div className='todoListBox'>
+        <ul>
+          {list.map((data, i) => (
+            <li key={data.id} className='listItem'>
+              <label>
+                <input type="checkbox" value={editCont} onChange={handleEdit()} autofocus/>{' '}
+                <span className='box__txt'>{data.content}</span>
+              </label>
+              <div className="box__btn">
+                <button type='button' className='btn__edit' onClick={()=>setIsEditing(false)}>수정</button>
+                <button type='button' className='btn__del' onClick={()=>handleDelete(i)}>삭제</button>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <Create input={input} setInput={setInput} handleSubmit={handleSubmit}/>
+      </div>
+    )
+  }else{
+    return(
+      <div className='todoListBox'>
+        <ul>
+          {list.map((data, i) => (
+            <li key={data.id} className='listItem'>
+              <label>
+                <input type="checkbox" onChange={()=>handleEdit()} autofocus/>
+                <span className={'box__txt'}>{data.content}</span>
+              </label>
+              <div className="box__btn">
+                <button type='button' className='btn__edit' onClick={()=>setIsEditing(true)}>수정</button>
+                <button type='button' className='btn__del' onClick={()=>handleDelete(i)}>삭제</button>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <Create input={input} setInput={setInput} handleSubmit={handleSubmit}/>
+      </div>
+    )
+  }
+
+  }
 
 export default List;

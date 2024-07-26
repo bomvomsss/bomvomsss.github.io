@@ -24,33 +24,39 @@ ol,ul,li {list-style: none;}
 }
 .listBox {display: flex;flex-direction: column;position: relative;padding: 20px;height: 100%;border: 2px solid #555;background: #fff;border-radius: 10px;z-index: 1;}
 .note {margin-bottom: 10px;color:#c6a6d3;}
-.checkIcon {position: relative;display: inline-block;vertical-align: top;width: 14px;height: 14px;border: 1px solid #333;background: #fff;border-radius: 3px;}
-input:checked ~ .checkIcon {background: #903dad;}
-input:checked ~ .checkIcon:before {content: '';position: absolute;top: 50%;left: 50%;margin-top: -4px;margin-left: -4px;width: 6px;height: 3px;border-left: 2px solid #fff;border-bottom: 2px solid #fff;transform: rotate(-45deg);}
 .todoListBox {
   display: flex;flex-direction: column;flex: 1;min-height: 0;
   ul {  flex: 1;margin-right: -20px;padding-right: 20px;overflow-y: auto;
     li{
-      display: -webkit-flex;display: -ms-flex;display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #c6a6d3;
+      display: -webkit-flex;display: -ms-flex;display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #c6a6d3;margin-bottom:5px;padding-bottom:3px;
       label{
         display: -webkit-flex;display: -ms-flex;display: flex;align-items: center;min-width: 0;height: 30px;
       }
       input[type='checkbox']{
-        position: absolute;top: 0;left: 0;opacity: 0;
+        display: inline-block;vertical-align: top;width: 14px;height: 14px;border: 1px solid #903dad;background: #fff;border-radius: 3px;accent-color: #903dad;margin-right:7px;
       }
       .checkIcon{
         flex-shrink: 0;margin-right: 7px;
       }
       .box__txt{
-        overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+        line-height:30px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
       }
-      .btn__del{
-        flex-shrink: 0;position: relative;width: 20px;height: 20px;border: 0;background: none;font-size: 0;color: transparent;
-        &::before{
-          content: '';position: absolute;top: 50%;left: 50%;margin-left: -6px;width: 12px;height: 1px;background: #903dad;transform: rotate(45deg);
+      .txt--linethrough{
+        text-decoration:line-through;
+      }
+      .box__btn{
+        display:flex;align-items:center;
+        .btn__del{
+          flex-shrink: 0;position: relative;width: 20px;height: 20px;border: 0;background: none;font-size: 0;color: transparent;
+          &::before{
+            content: '';position: absolute;top: 50%;left: 50%;margin-left: -6px;width: 12px;height: 1px;background: #903dad;transform: rotate(45deg);
+          }
+          &::after{
+            content: '';position: absolute;top: 50%;left: 50%;margin-left: -6px;width: 12px;height: 1px;background: #903dad;transform: rotate(-45deg);
+          }
         }
-        &::after{
-          content: '';position: absolute;top: 50%;left: 50%;margin-left: -6px;width: 12px;height: 1px;background: #903dad;transform: rotate(-45deg);
+        .btn__edit{
+          background:transparent;width:35px;height:20px;border:none;color:#c6a6d3;
         }
       }
     }

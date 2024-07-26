@@ -4,7 +4,7 @@ import List from './components/todoList'
 function Head(){
   return(
     <div className='box__head'>
-      <p className='subtitle'>오늘도 화이팅</p>
+      <p className='subtitle'>조금만 더 화이팅 !</p>
       <h1>✨TODO LIST ✨</h1>
     </div>
   )
