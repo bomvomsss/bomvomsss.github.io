@@ -3,6 +3,7 @@ body {margin: 0;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
 code {font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;}
 ol,ul,li {list-style: none;}
 .App {display: -webkit-flex;display: -ms-flex;display: flex;flex-direction: column;justify-content: center;align-items: center;height: 100vh;background: #eee;}
+button{cursor: pointer;}
 .box__head {
   width:350px;margin-bottom:15px;
   h1 {
