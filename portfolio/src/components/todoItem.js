@@ -67,16 +67,6 @@ function Item({data, list, setList, handleSubmit, index}){
         </>
       )
     }  
-    
-
-          {/* <label>
-            <input type="checkbox"/>
-            <span className={'box__txt'}>{data}</span>
-          </label>
-          <div className="box__btn">
-            <button type='button' className='btn__edit' onClick={()=>setIsEditing(true)}>수정</button>
-            <button type='button' className='btn__del' onClick={handleDelete}>삭제</button>
-          </div> */}
   </>
   )
 }

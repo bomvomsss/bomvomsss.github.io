@@ -1,11 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Create from './todoCreate'
 import Item from './todoItem'
 
 function List(){
   const [input, setInput] = useState('');
-  const [list, setList] = useState(['Initial List', 'test']);
+  let [list, setList] = useState(['Initial List', 'Test List']);
 
+  useEffect(()=>{
+    const curList = localStorage.getItem('todoList');
+    setList(JSON.parse(curList))
+    const loadList = JSON.parse(curList)
+    
+    if(curList === null || loadList.length === 0){
+      localStorage.setItem('todoList', JSON.stringify(list))
+    }else{
+      return
+    }
+  },[])
+  // 비었을때 세팅용
+  
   const handleSubmit = (updated, index) => {
     const newList = [...list];
     newList[index] = updated;
@@ -15,12 +28,15 @@ function List(){
   const handleAdd = (e) => {
     e.preventDefault();
     if(input.trim() !== ''){
-      setList([...list, input]);
+      let addedList = [...list, input];
+      localStorage.setItem('todoList', JSON.stringify(addedList))
+      setList(addedList)
       setInput('');
     }
   }
   // 투두 등록
-
+  
+  
   return(
     <div className='todoListBox'>
       <ul>
@@ -30,7 +46,7 @@ function List(){
           </li>
         ))}
       </ul>
-      <Create input={input} setInput={setInput} handleSubmit={handleAdd}/>
+      <Create input={input} setInput={setInput} handleAdd={handleAdd}/>
     </div>
   )
 }
