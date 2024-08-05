@@ -41,6 +41,9 @@ button{cursor: pointer;}
       }
       .box__txt{
         line-height:30px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+        &.checked{
+          text-decoration:line-through;
+        }
       }
       .txt--linethrough{
         text-decoration:line-through;

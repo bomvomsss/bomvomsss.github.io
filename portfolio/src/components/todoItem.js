@@ -9,6 +9,7 @@ function Item({data, list, setList, handleSubmit, index}){
   const handleDelete = () => {
     const newList = [...list];
     newList.splice(index, 1);
+    localStorage.setItem('todoList', JSON.stringify(newList));
     setList(newList);
   }
   // 투두 삭제
@@ -18,7 +19,7 @@ function Item({data, list, setList, handleSubmit, index}){
       setIsEditing(false);
       return;
     }
-    handleSubmit(updated, index)
+    handleSubmit(updated, index);
     setUpdated('');
     setIsEditing(false);
   }
@@ -42,7 +43,7 @@ function Item({data, list, setList, handleSubmit, index}){
     { isEditing
       ? (
         <>
-          <label className={isChecked? 'box__txt checked' : 'box__txt'}>
+          <label className={isChecked ? 'box__txt checked' : 'box__txt'}>
             <input type="text"
               value={updated}
               onChange={(e) => {setUpdated(e.target.value)}}
@@ -56,7 +57,7 @@ function Item({data, list, setList, handleSubmit, index}){
         </>
       ) : (
         <>
-          <label>
+          <label className={isChecked ? 'box__txt checked' : 'box__txt'}>
             <input type="checkbox" checked={isChecked} onChange={handleChk}/>
             <span className={'box__txt'}>{data}</span>
           </label>

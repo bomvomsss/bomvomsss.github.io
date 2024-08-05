@@ -22,6 +22,7 @@ function List(){
   const handleSubmit = (updated, index) => {
     const newList = [...list];
     newList[index] = updated;
+    localStorage.setItem('todoList', JSON.stringify(newList))
     setList(newList)
   };
   
@@ -35,7 +36,6 @@ function List(){
     }
   }
   // 투두 등록
-  
   
   return(
     <div className='todoListBox'>
