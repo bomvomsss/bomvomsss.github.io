@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family:'Pretendard-Regular', sans-serif;
+  background:#000;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  padding:3vw 7vw;
+  color:#fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+h1{
+  font-size:5em;
+}
+p{
+  margin:0;
+}
+.main{
+  height:100vh;
+  padding-top:30em;
+  box-sizing:border-box;
+}
+.link-bar{
+  padding:2em 5em;
+  position:fixed;
+  top:0;
+  left:0;
+}
+.link-bar a{
+  color:#fff;
+  text-decoration:none;
+  padding-right: 5vw;
+  font-size: 1.5em;
+  opacity:0.5;
+}
+.link-bar a.active{
+  opacity:1;
+  transition:all 1.5s ease;
+}
+.about{
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:0.2em;
 }
-
-.App-link {
-  color: #61dafb;
+.about strong{
+  font-size:2.4em;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about b{
+  font-size:1.9em;
+}
+.about p{
+  font-size:1.2em;
+  line-height:1.3em;
 }
