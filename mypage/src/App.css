@@ -6,52 +6,115 @@
 }
 body{
   font-family:'Pretendard-Regular', sans-serif;
-  background:#000;
+  background:#22112e;
 }
 .App{
-  padding:3vw 7vw;
+  padding:3vw 10vw;
   color:#fff;
 }
+/* home */
+.home > div{
+  padding-left:10vw;
+}
 h1{
-  font-size:5em;
+  font-size:5rem;
 }
 p{
   margin:0;
 }
 .main{
   height:100vh;
-  padding-top:30em;
+  padding-top:31.5rem;
   box-sizing:border-box;
 }
+/* home > navbar */
 .link-bar{
-  padding:2em 5em;
   position:fixed;
-  top:0;
-  left:0;
+  left:2vw;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-flow:column;
+  justify-content:center;
+  height:100vh;
+  gap:2vw;
 }
 .link-bar a{
   color:#fff;
   text-decoration:none;
   padding-right: 5vw;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   opacity:0.5;
 }
 .link-bar a.active{
   opacity:1;
   transition:all 1.5s ease;
 }
+h2{
+  margin-top:5rem;
+  font-size:2.3rem;
+}
+.skill h2, .license h2{
+  margin-bottom:3.5rem;
+}
+/* home > about */
 .about{
   display:flex;
   flex-direction: column;
-  gap:0.2em;
-}
-.about strong{
-  font-size:2.4em;
+  gap:0.2rem;
+  margin-bottom:5vw;
 }
 .about b{
-  font-size:1.9em;
+  font-size:1.9rem;
 }
 .about p{
-  font-size:1.2em;
-  line-height:1.3em;
+  font-size:1.2rem;
+  line-height:1.8rem;
+}
+/* home > skill */
+.skill p{
+  font-size:1.4rem;
+  font-weight:bold;
+  margin:1em 0 0.8rem;
+}
+.skill > div{
+  display:flex;
+  justify-content:left;
+  flex-wrap:wrap;
+  gap:0.4rem;
+  margin-bottom:2rem;
+}
+.skill span{
+  padding:0.3rem 0.4rem;
+  display:flex;
+  align-items:flex-start;
+  background:#fff;
+  border-radius:0.2rem;
+  color:#000;
+  width:fit-content;
+}
+.skill span svg{
+  height:1.1rem;
+  margin-right:0.1rem;
+}
+/* home > license */
+.license .licenseBox{
+  display:flex;
+  justify-items:space-between;
+  margin-bottom:1.5rem;
+}
+.license p{
+  font-size:1.4rem;
+  font-weight:bold;
+  width:35%;
+}
+.license ul{
+  list-style-type:none;
+  padding:0;
+  margin:0.5rem 0 0;
+}
+.license li{
+  font-size:1.1rem;
+  font-weight:normal;
+  margin-bottom:0.3rem;
 }
