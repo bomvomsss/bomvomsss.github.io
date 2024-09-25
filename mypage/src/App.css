@@ -14,7 +14,7 @@ body{
 }
 /* home */
 .home > div{
-  padding-left:10vw;
+  padding-left:8vw;
 }
 h1{
   font-size:5rem;
@@ -22,10 +22,27 @@ h1{
 p{
   margin:0;
 }
-.main{
+.home .main{
   height:100vh;
-  padding-top:31.5rem;
+  padding:5rem 0;
   box-sizing:border-box;
+}
+.main .top{
+  font-size:1.9rem;
+  font-weight:normal;
+  position:relative;
+}
+.main .top::after{
+  content:'';
+  position:absolute;
+  top:1.2rem;
+  left:19rem;
+  width:42.5rem;
+  height:2px;
+  background:#fff;
+}
+.main .top.off::after{
+  display:none;
 }
 /* home > navbar */
 .link-bar{
@@ -95,26 +112,55 @@ h2{
 }
 .skill span svg{
   height:1.1rem;
-  margin-right:0.1rem;
+  margin-right:0.2rem;
 }
 /* home > license */
-.license .licenseBox{
+.licenseBox{
   display:flex;
   justify-items:space-between;
   margin-bottom:1.5rem;
 }
-.license p{
+.licenseBox p{
   font-size:1.4rem;
   font-weight:bold;
   width:35%;
 }
-.license ul{
-  list-style-type:none;
-  padding:0;
-  margin:0.5rem 0 0;
-}
-.license li{
+.licenseBox p i{
+  font-weight:normal;
   font-size:1.1rem;
+  font-style:normal;
+}
+.licenseBox p span{
+  display:block;
+  font-size:1.2rem;
+  font-weight:normal;
+  margin-top:0.3rem;
+}
+.licenseBox ol li{
+  font-size:1.3rem;
   font-weight:normal;
   margin-bottom:0.3rem;
+}
+.licenseBox ol > li{
+  margin-bottom:1rem;
+}
+.licenseBox ul{
+  margin-top:0.7rem;
+  padding-left:1.3rem;
+}
+.license .licensebox ul{
+  list-style-type:none;
+}
+.licenseBox ul.flexBox{
+  display:flex;
+  flex-wrap:wrap;
+  width:20rem;
+  column-gap: 2rem;
+}
+.licenseBox ul.flexBox li{
+  width:8rem;
+}
+.licenseBox ul li{
+  font-size:1.1rem;
+  text-decoration:none;
 }
