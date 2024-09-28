@@ -1,15 +1,26 @@
 import { SiNotion,SiPhpstorm,SiTypescript,SiSlack,SiFigma,SiRedux,SiBookstack } from "react-icons/si";
 import { DiReact,DiHtml5,DiCss3Full,DiJsBadge,DiJqueryLogo,DiPhotoshop,DiIllustrator,DiBootstrap,DiMarkdown,DiSass,DiGit,DiPhp,DiMysql } from "react-icons/di";
+import Typewriter from 'typewriter-effect';
 
 function Home(){
 
   return (
     <div className="wrap home">
       <div className="main">
+        <div className="top">
+        </div>
         <p className="top">Front-end Developer</p>
         <h1>
-          <p>Ga Yeong</p>
-          <p>Portfolio</p>
+          <Typewriter
+            onInit={(typewriter)=>{
+              typewriter
+              .typeString('Ga Yeong')
+              .pauseFor(300)
+              .typeString('<br>Portfolio')
+              .start()
+              .pauseFor(2000)
+            }}
+          />
         </h1>
       </div>
       <div className="about">

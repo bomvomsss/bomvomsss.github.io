@@ -13,7 +13,7 @@ body{
   color:#fff;
 }
 /* home */
-.home > div{
+.wrap > div{
   padding-left:8vw;
 }
 h1{
@@ -40,9 +40,11 @@ p{
   width:42.5rem;
   height:2px;
   background:#fff;
+  animation:topline 3s ease-in
 }
-.main .top.off::after{
-  display:none;
+@keyframes topline{
+  0%{width:0;}
+  100%{width:42.5rem;}
 }
 /* home > navbar */
 .link-bar{
@@ -55,6 +57,14 @@ p{
   justify-content:center;
   height:100vh;
   gap:2vw;
+  opacity:0;
+  transition:opacity 1.5s ease;
+  pointer-events:none;
+}
+.link-bar.active{
+  opacity:1;
+  transition:opacity 1.5s ease;
+  pointer-events: auto;
 }
 .link-bar a{
   color:#fff;
@@ -63,13 +73,10 @@ p{
   font-size: 1.5rem;
   opacity:0.5;
 }
-.link-bar a.active{
-  opacity:1;
-  transition:all 1.5s ease;
-}
 h2{
   margin-top:5rem;
   font-size:2.3rem;
+  color:#fff;
 }
 .skill h2, .license h2{
   margin-bottom:3.5rem;
@@ -163,4 +170,65 @@ h2{
 .licenseBox ul li{
   font-size:1.1rem;
   text-decoration:none;
+}
+.projectBox{
+  display:flex;
+  gap:3rem;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:3rem;
+}
+.projectBox .imgBox{
+  width:50%;
+  text-align:center;
+}
+.projectBox .imgBox img{
+  width:10rem;
+}
+.projectBox.monami .imgBox{
+  position:relative;
+}
+.projectBox.monami .imgBox img{
+  width: 20rem;
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+.projectBox a{
+  font-size:1.2rem;
+  color:#fff;
+  text-decoration:none;
+  width:11rem;
+  display: inline-block;
+}
+.projectBox h3 a{
+  font-size:1.8rem;
+  text-align:center;
+}
+.web h3{
+  font-size:1.8rem;
+  width: 40%;
+}
+.project strong{
+  font-weight:normal;
+  display:block;
+}
+.projectBox ul{
+  width:48%;
+  list-style-type:circle;
+}
+.projectBox ul li{
+  font-size:1.2rem;
+  margin-bottom:0.5rem;
+}
+.projectBox .icon img{
+  filter:invert(1);
+  width: 1.4rem;
+  margin-bottom: -0.3rem;
+  margin-left: 0.2rem;
+}
+.projectBox a:hover{
+  transform:scale(1.1);
+  transition:size .2s ease;
 }
