@@ -1,8 +1,9 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 import {Routes, Route, useLocation, NavLink} from 'react-router-dom';
 import Home from './pages/Home.js';
 import Project from './pages/Project.js';
-import { useState, useEffect } from 'react';
+import Contact from './pages/Contact.js';
 
 function App() {
   const [position, setPosition] = useState(0);
@@ -53,7 +54,7 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home/> }/>
         <Route path='/project' element={ <Project/> }/>
-        <Route path='/contact' element={ <div></div> }/>
+        <Route path='/contact' element={ <Contact/> }/>
       </Routes>
     </div>
   );
