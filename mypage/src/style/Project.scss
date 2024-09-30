@@ -1,0 +1,77 @@
+.project{
+  padding-left:8rem;
+  strong{
+    font-weight:normal;
+    display:block;
+  }
+  h2{
+    &.tit{
+      display:inline-block;
+      margin:5rem 1.5rem 8rem 0;
+    }
+  }
+  .projectBox{
+    display:flex;
+    gap:3rem;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:3rem;
+    a{
+      font-size:1rem;
+      color:#fff;
+      text-decoration:none;
+      width:11rem;
+      display: inline-block;
+      text-align:center;
+      &:hover{
+        transform:scale(1.1);
+        transition:size .2s ease;
+      }
+    }
+    h3{
+      font-size:1.8rem;
+      width: 40%;
+    }
+    h4{
+      a{
+        font-size:1.8rem;
+      }
+    }
+    .imgBox{
+      width:50%;
+      text-align:center;
+      img{
+        width:10rem;
+      }    
+    }
+    &.monami .imgBox{
+      position:relative;
+      img{
+        width: 20rem;
+        position: absolute;
+        top: 50%;
+        left: 53%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    ul{
+      width:48%;
+      list-style-type:circle;
+      li{
+        font-size:1.2rem;
+        margin-bottom:0.5rem;
+        a{
+          width:5.8rem;
+        }
+      }
+    }
+    .icon{
+      img{
+        filter:invert(1);
+        width: 1.4rem;
+        margin-bottom: -0.3rem;
+        margin-left: 0.2rem;
+      }
+    }
+  }
+}

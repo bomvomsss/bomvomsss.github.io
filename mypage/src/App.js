@@ -22,7 +22,7 @@ function App() {
   },[])
 
   useEffect(()=>{
-    if(position > 700){
+    if(position > 300){
       setIsVisible(true)
     }else{
       setIsVisible(false)
@@ -50,7 +50,6 @@ function App() {
           return isActive ? activeStyle : deactiveStyle;
         }}>CONTACT</NavLink>
       </div>
-
       <Routes>
         <Route path='/' element={ <Home/> }/>
         <Route path='/project' element={ <Project/> }/>
