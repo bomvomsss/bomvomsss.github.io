@@ -1,0 +1,47 @@
+.contact {
+  padding-left: 8rem;
+}
+.contact .subtit {
+  font-size: 0.8rem;
+}
+.contact .conBox {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-top: 15rem;
+  padding: 0;
+}
+.contact .conBox li {
+  width: 33%;
+  text-align: center;
+}
+.contact .conBox li p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.contact .conBox li svg {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+}
+.contact .conBox li span {
+  display: block;
+  font-size: 1.3rem;
+}
+.contact .conBox li span svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: -0.3rem;
+}
+.contact .conBox li a {
+  color: #fff;
+  text-decoration: none;
+}
+.contact .conBox li a img {
+  filter: invert(1);
+  width: 1.5rem;
+  margin-bottom: -0.3rem;
+}
+
+/*# sourceMappingURL=Contact.css.map */

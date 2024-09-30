@@ -4,6 +4,7 @@ import {Routes, Route, useLocation, NavLink} from 'react-router-dom';
 import Home from './pages/Home.js';
 import Project from './pages/Project.js';
 import Contact from './pages/Contact.js';
+import ScrollToTop from './components/ScrollToTop.js';
 
 function App() {
   const [position, setPosition] = useState(0);
@@ -36,7 +37,7 @@ function App() {
   const deactiveStyle = {
     textDecoration:'none'
   }
-
+  
   return (
     <div className="App">
       <div className={`${'link-bar'} ${isVisible || location.pathname !== '/' ? 'active' : ''}`}>
@@ -48,8 +49,9 @@ function App() {
         }}>PROJECT</NavLink>
         <NavLink to='/contact' style={({isActive})=>{
           return isActive ? activeStyle : deactiveStyle;
-        }}>CONTACT</NavLink>
+        }}>CONTACT</NavLink>``
       </div>
+      <ScrollToTop/>
       <Routes>
         <Route path='/' element={ <Home/> }/>
         <Route path='/project' element={ <Project/> }/>

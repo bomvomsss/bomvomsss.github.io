@@ -1,3 +1,4 @@
+import '../style/Contact.scss';
 import { FaGithub, FaRegCopy } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { SiVelog } from "react-icons/si";
@@ -25,7 +26,7 @@ function Contact(){
 
   return (
     <div>
-      <div className="wrap">
+      <div className="wrap contact">
       <motion.div
       transition={{ type: "spring" }}
       initial={{ opacity: 0, y: 20 }}

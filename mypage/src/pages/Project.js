@@ -26,7 +26,6 @@ function Project(){
           y: 0,
           transition: { delay: 0.5 },
         }}
-        
       >
         <h2 className="tit">Project</h2>
         <span className="subtit">지속적으로 업데이트 중입니다</span>

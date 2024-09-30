@@ -12,13 +12,6 @@ body{
   padding:3vw 10vw;
   color:#fff;
 }
-/* home */
-/* .wrap{
-  padding-left:8vw;
-} */
-/* .wrap .main{
-  margin-left:-8vw; 
-}*/
 h1{
   font-size:5rem;
 }
@@ -55,48 +48,5 @@ h2{
   font-size: 1.5rem;
   opacity:0.5;
 }
-/* project */
 
-
-.subtit{
-  font-size:0.8rem;
-}
-.conBox{
-  display:flex;
-  justify-content:space-evenly;
-  list-style:none;
-  margin-top:15rem;
-}
-.conBox li{
-  width:33%;
-  text-align:center;
-}
-.conBox li p{
-  font-size:2rem;
-  margin-bottom:2rem;
-  font-weight:bold;
-}
-.conBox li svg{
-  width:8rem;
-  height:8rem;
-  margin-bottom:2rem;
-}
-.conBox li span{
-  display:block;
-  font-size:1.3rem;
-}
-.conBox li a{
-  color:#fff;
-  text-decoration:none;
-}
-.conBox li a img{
-  filter:invert(1);
-  width:1.5rem;
-  margin-bottom:-0.3rem;
-}
-.conBox li span svg{
-  width:1.5rem;
-  height:1.5rem;
-  margin-bottom: -0.3rem;
-}
 @media screen and (min-width:)
