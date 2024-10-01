@@ -1,3 +1,4 @@
+import './style/App.scss';
 import './App.css';
 import { useState, useEffect } from 'react';
 import {Routes, Route, useLocation, NavLink} from 'react-router-dom';
@@ -10,7 +11,7 @@ function App() {
   const [position, setPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
-
+  
   // 스크롤 메뉴 바
   useEffect(()=>{
     function onScroll(){
@@ -49,7 +50,7 @@ function App() {
         }}>PROJECT</NavLink>
         <NavLink to='/contact' style={({isActive})=>{
           return isActive ? activeStyle : deactiveStyle;
-        }}>CONTACT</NavLink>``
+        }}>CONTACT</NavLink>
       </div>
       <ScrollToTop/>
       <Routes>

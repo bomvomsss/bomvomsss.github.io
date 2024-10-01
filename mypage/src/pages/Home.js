@@ -1,7 +1,6 @@
 import '../style/Home.scss';
 import { SiNotion,SiPhpstorm,SiTypescript,SiSlack,SiFigma,SiRedux,SiBookstack } from "react-icons/si";
 import { DiReact,DiHtml5,DiCss3Full,DiJsBadge,DiJqueryLogo,DiPhotoshop,DiIllustrator,DiBootstrap,DiMarkdown,DiSass,DiGit,DiPhp,DiMysql } from "react-icons/di";
-import { FaAngleDoubleDown } from "react-icons/fa";
 import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
 
@@ -10,8 +9,6 @@ function Home(){
   return (
     <div className="wrap home">
       <div className="main">
-        <div className="top">
-        </div>
         <p className="top">Front-end Developer</p>
         <h1>
           <Typewriter

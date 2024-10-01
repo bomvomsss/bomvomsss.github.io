@@ -7,46 +7,6 @@
 body{
   font-family:'Pretendard-Regular', sans-serif;
   background:#22112e;
+  width:100%;
+  height:100%;
 }
-.App{
-  padding:3vw 10vw;
-  color:#fff;
-}
-h1{
-  font-size:5rem;
-}
-p{
-  margin:0;
-}
-h2{
-  font-size:2.3rem;
-  color:#fff;
-}
-.link-bar{
-  position:fixed;
-  left:2vw;
-  top:50%;
-  transform:translateY(-50%);
-  display:flex;
-  flex-flow:column;
-  justify-content:center;
-  height:100vh;
-  gap:2vw;
-  opacity:0;
-  transition:opacity 1.0s ease;
-  pointer-events:none;
-}
-.link-bar.active{
-  opacity:1;
-  transition:opacity .5s ease;
-  pointer-events: auto;
-}
-.link-bar a{
-  color:#fff;
-  text-decoration:none;
-  padding-right: 5vw;
-  font-size: 1.5rem;
-  opacity:0.5;
-}
-
-@media screen and (min-width:)

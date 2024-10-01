@@ -5,15 +5,6 @@ import { SiVelog } from "react-icons/si";
 import { motion } from "framer-motion";
 
 function Contact(){
-  // const handleCopyClipBoard = async (text: string) => {
-  //   try {
-  //     await navigator.clipboard.writeText(text);
-  //     alert("복사되었습니다.");
-  //   } catch (e) {
-  //     alert("복사에 실패하였습니다.");
-  //   }
-  // };
-
   const handleCopyClick = (textToCopy) => {
     navigator.clipboard.writeText(textToCopy)
       .then(() => {

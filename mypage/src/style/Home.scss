@@ -1,3 +1,5 @@
+@import "./mixin";
+
 .home{
   .main{
     height:100vh;
@@ -12,7 +14,7 @@
         position:absolute;
         top:1.2rem;
         left:19rem;
-        width:42.5rem;
+        width:42.5%;
         height:2px;
         background:#fff;
         animation:topline 1.5s ease-in;
@@ -174,7 +176,7 @@
 
 @keyframes topline{
   0%{width:0;}
-  100%{width:42.5rem;}
+  100%{width:42.5%;}
 }
 @-webkit-keyframes sdb {
   0% {
@@ -196,5 +198,167 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes topline2{
+  0%{width:0;}
+  100%{width:19rem;}
+}
+@keyframes topline3 {
+  0%{width:0;}
+  100%{width:30px;}  
+}
+@include laptopToTablet{
+  .home{
+    .main{
+      width: 85vw;
+      padding:3rem;
+      .top{
+        font-size:3em;
+        &::after{
+          top:2.3rem;
+          left:10em;
+          width:4.5em;
+          height: 1px;
+          animation:topline2 1.5s ease-in;
+        }
+      }
+      h1{
+        font-size:7em;
+      }
+      .scroll{
+        display:none;
+      }
+    }
+    .about{
+      display: block;
+      padding-left:0;
+      .profileBox{
+        text-align:center;
+        margin-bottom:4rem;
+        span{
+          width: 13rem;
+          height: 13rem;
+        }
+        h2.name{
+          margin:1rem 0 0 0;
+          font-size:3rem;
+        }
+      }
+      p{
+        font-size: 1.5em;
+        line-height: 2.3rem;
+      }
+    }
+    .career, .skill, .license{
+      padding-left:0;
+      .licenseBox{
+        p{
+        width:45%;
+        }
+        ol{
+          ul{
+            &.flexBox{
+              li{
+                width:43%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile{
+  .home{
+    .main{
+      width:87vw;
+      padding:3rem 0;
+      height:100dvh;
+      .top{
+        font-size:1.8em;
+        &::after{
+          top:1rem;
+          left:9.8em;
+          width:30px;
+          height:1px;
+          animation:topline3 1s ease-in;
+        }
+      }
+      h1{
+        font-size:4em;
+      }
+      .scroll{
+        display:none;
+      }
+    }
+    .about{
+      display: block;
+      padding:0 0 3rem 0;
+      .profileBox{
+        text-align:center;
+        margin-bottom:3rem;
+        width:85dvw;
+        span{
+          width: 13rem;
+          height: 13rem;
+        }
+        h2.name{
+          margin:1rem 0 0 0;
+          font-size:1.5rem;
+        }
+      }
+      p{
+        font-size:1em;
+        line-height:1.8rem;
+        letter-spacing:0.8;
+        width:85dvw
+      }
+    }
+    .career, .skill, .license{
+      padding-left:0;
+      h2{
+        margin:8rem 0 3.5rem 
+      }
+      .licenseBox{
+        display:block;
+        width:70dvw;
+        p{
+        width:100%;
+        }
+        ol{
+          width:100%;
+          ul{
+            width:100%;
+            &.flexBox{
+              li{
+                width:43%;
+              }
+            }
+            li{
+              width:100%;
+              font-size:1rem;
+            }
+          }
+        }
+      }
+      p{
+        margin-bottom:1.5rem;
+        font-size:1.2rem;
+      }
+      .bestSkill, .normalSkill, .canSkill{
+        width:90dvw;
+        span{
+          font-size:1.1rem;
+        }
+      }
+    }
+    .licenseBox{
+      ol{
+        li{
+          font-size:1.2rem;
+        }
+      }
+    }
   }
 }

@@ -1,3 +1,5 @@
+@import "./mixin";
+
 .project{
   padding-left:8rem;
   strong{
@@ -71,6 +73,84 @@
         width: 1.4rem;
         margin-bottom: -0.3rem;
         margin-left: 0.2rem;
+      }
+    }
+  }
+}
+
+@include laptopToTablet{
+  .project{
+    padding-left:0;
+    strong{
+      font-size:1.5rem;
+    }
+    h3{
+      font-size:1.3rem;
+    }
+    .projectBox{
+      ul{
+        li{
+          &.icon{
+            a{
+              font-size:1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile{
+  .project{
+    padding-left:0;
+    .subtit{
+      font-size:0.8rem;
+    }
+    h3{
+      font-size:1.5rem;
+      text-decoration:underline;
+      text-align:center;
+      margin-bottom:5rem;
+    }
+    .projectBox{
+      display:block;
+      padding-bottom:5rem;
+      border-bottom:1px dotted #fff;
+      h4{
+        a{
+          font-size:1.5rem;
+          width:15rem;
+        }
+      }
+      .imgBox{
+        width:100%;
+        img{
+          width:11rem;
+        }
+      }
+      a{
+        margin:1rem 0;
+        text-align:center;
+        width:100%;
+      }
+      ul{
+        width:100%;
+        li{
+          font-size:1rem;
+          &.icon{
+            a{
+              margin:0 0 0 -4px;
+            }
+          }
+        }
+      }
+      &.monami{
+        .imgBox{
+          img{
+            position:static;
+            transform:translate(0,0);
+          }
+        }
       }
     }
   }
