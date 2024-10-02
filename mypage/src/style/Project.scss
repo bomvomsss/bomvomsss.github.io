@@ -112,19 +112,23 @@
       font-size:0.8rem;
     }
     h3{
-      font-size:1.5rem;
-      text-decoration:underline;
-      text-align:center;
+      font-size:1rem;
+      text-align:left;
       margin-bottom:5rem;
+      &::before{
+        content:':: ';
+        display:inline-block;
+        margin-right:5px;
+      }
     }
     .projectBox{
       display:block;
-      padding-bottom:5rem;
+      padding-bottom:3rem;
       border-bottom:1px dotted #fff;
       h4{
         a{
           font-size:1.5rem;
-          width:15rem;
+          width:100%;
         }
       }
       .imgBox{
@@ -145,6 +149,10 @@
           &.icon{
             a{
               margin:0 0 0 -4px;
+              font-size:1.1rem;
+            }
+            img{
+              width:1.2rem;
             }
           }
         }
