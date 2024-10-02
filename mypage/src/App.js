@@ -57,6 +57,7 @@ function App() {
         <Route path='/' element={ <Home/> }/>
         <Route path='/project' element={ <Project/> }/>
         <Route path='/contact' element={ <Contact/> }/>
+        <Route path="*" element={<div> 404 </div>}/>
       </Routes>
     </div>
   );
