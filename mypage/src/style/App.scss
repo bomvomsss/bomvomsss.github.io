@@ -44,6 +44,7 @@ h2{
     opacity:0.5;
   }
 }
+.wrap{padding-bottom:7rem;}
 @include laptopToTablet{
   .App{
     width: 100vw;
@@ -55,7 +56,7 @@ h2{
       left: 0;
       display: block;
       transform: translate(0, 0);
-      height: 5vh;
+      height: 9vh;
       width: 100vw;
       text-align: center;
       z-index: 5;

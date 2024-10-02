@@ -27,8 +27,6 @@ function Home(){
           <span></span>
           <span></span>
         </div>
-        {/* <div className="scrBtn"><FaAngleDoubleDown color="#fff"/>
-        </div> */}
       </div>
       <motion.div
         transition={{ type: "spring" }}
@@ -170,7 +168,7 @@ function Home(){
           transition: { delay: 0.5 },
         }}
       >
-        <div className="license">
+        <div className="license btm">
           <h2>CERTIFICATE</h2>
           <div className="licenseBox">
             <p>웹디자인 기능사</p>
@@ -202,9 +200,6 @@ function Home(){
           </div>
         </div>
       </motion.div>
-        <div className="education">
-
-        </div>
     </div>
   )
 }

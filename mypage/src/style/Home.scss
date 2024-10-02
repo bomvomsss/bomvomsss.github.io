@@ -21,7 +21,7 @@
       }
     }
     .scroll{
-      padding-top:30rem;
+      padding-top:10rem;
       transform:scale(1, 0.7);
       span{
         position: absolute;
@@ -126,11 +126,12 @@
   }
   .licenseBox{
     display:flex;
+    justify-content: left;
     margin-bottom:1.5rem;
     p{
       font-size:1.4rem;
       font-weight:bold;
-      width:35%;
+      width:30%;
       i{
         font-weight:normal;
         font-size:1.1rem;
@@ -152,23 +153,26 @@
       }
     }
     ol{
+      width:60%;
       li{
-        margin-bottom:1rem;
+        width:100%;
+        margin-bottom:3rem;
         font-size:1.3rem;
         font-weight:normal;
       }
       ul{
-        // list-style-type:none;
         &.flexBox{
           display:flex;
           flex-wrap:wrap;
-          width:20rem;
-          column-gap: 2rem;
+          column-gap:2em;
+          li{
+            width:40%;
+          }
         }
         li{
           font-size:1.1rem;
           margin-bottom:0.3rem;
-          width:40%;
+          width:100%;
         }
       }
     }
@@ -212,7 +216,7 @@
 @include laptopToTablet{
   .home{
     .main{
-      width: 85vw;
+      width:90vw;
       padding:3rem;
       .top{
         font-size:3em;
@@ -228,7 +232,15 @@
         font-size:7em;
       }
       .scroll{
-        display:none;
+        span{
+          top:15rem;
+          &:nth-of-type(2){
+            top:16rem
+          }
+          &:nth-of-type(3){
+            top:17rem;
+          }
+        }
       }
     }
     .about{
@@ -290,7 +302,15 @@
         font-size:4em;
       }
       .scroll{
-        display:none;
+        span{
+          top:38rem;
+          &:nth-of-type(2){
+            top:39rem
+          }
+          &:nth-of-type(3){
+            top:40rem;
+          }
+        }
       }
     }
     .about{
