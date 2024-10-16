@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
 import '../style/Project.scss';
+import { motion } from "framer-motion";
+import ProjectItems from "../components/ProjectItems";
 
 function Project(){
   const openPopup = link => {
@@ -50,28 +51,34 @@ function Project(){
       >
         <strong className="miniTit">| 클론코딩</strong>
         <h3>Responsible</h3>
-        <div className="projectBox">
-          <div className="imgBox">
-            <img src="https://bomvomsss.github.io/first_portfolio/img/dongbuLogo.png" alt="동부건설" />
-          </div>
-          <a href="javscript:;" onClick={()=>{openPopup('https://bomvomsss.github.io/first_portfolio/dongbu/')}}>바로가기</a>
-          <ul>
-            <li>메인비주얼 슬라이드</li>
-            <li>마우스오버 이벤트</li>
-            <li>모달 팝업</li>
-          </ul>
-        </div>
-        <div className="projectBox">
-          <div className="imgBox">
-            <img src="https://www.glovis.net/Kor/common/images/logo.png" alt="현대글로비스"/>
-          </div>
-          <a href="javscript:;" onClick={()=>{openPopup('https://bomvomsss.github.io/first_portfolio/hyundai/')}}>바로가기</a>
-          <ul>
-            <li>메인비주얼 동영상</li>
-            <li>공지사항 슬라이드</li>
-            <li>스크롤 애니메이션</li>
-          </ul>
-        </div>
+        <ProjectItems
+          imgSrc="https://bomvomsss.github.io/first_portfolio/img/dongbuLogo.png"
+          imgAlt="동부건설"
+          link="https://bomvomsss.github.io/first_portfolio/dongbu/"
+          onClick={(e) => {
+            e.preventDefault(); // 기본 링크 이동을 막음
+            openPopup('https://bomvomsss.github.io/first_portfolio/dongbu/');
+          }}
+          features={[
+            "메인비주얼 슬라이드",
+            "마우스오버 이벤트",
+            "모달 팝업"
+          ]}
+        />
+        <ProjectItems
+          imgSrc="https://www.glovis.net/Kor/common/images/logo.png"
+          imgAlt="현대글로비스"
+          link="https://bomvomsss.github.io/first_portfolio/hyundai/"
+          onClick={(e) => {
+            e.preventDefault(); // 기본 링크 이동을 막음
+            openPopup('https://bomvomsss.github.io/first_portfolio/hyundai/');
+          }}
+          features={[
+            "메인비주얼 동영상",
+            "공지사항 슬라이드",
+            "스크롤 애니메이션"
+          ]}
+        />
       </motion.div>
       <motion.div
         transition={{ type: "spring" }}
@@ -83,51 +90,63 @@ function Project(){
         }}
       >
         <h3>Web</h3>
-        <div className="projectBox">
-          <div className="imgBox">
-            <img src="https://i.namu.wiki/i/4eypF0rXCsOQDTv_GhoosbW9KDui46rag43lg0zI_-h-WSQTGeicUv09m4cuIuv4mT6bHpYwpfEzt_8FDnUwXd_OmxA0Y8IPSYuYtBrlsqQjsFkGPCBiX7vTwGiKPXrT5EFUbdl7CDJfTWgQDwMMUw.svg" alt="daelim" />
-          </div>
-          <a href="https://bomvomsss.github.io/first_portfolio/daelim/" alt="daelim">바로가기</a>
-          <ul>
-            <li>2단 메뉴, 전체메뉴</li>
-            <li>메인 슬라이드</li>
-            <li>동영상 팝업</li>
-          </ul>
-        </div>
-        <div className="projectBox monami">
-          <div className="imgBox">
-            <img src="https://shop-phinf.pstatic.net/20240116_126/1705391548190HN7cs_PNG/%BA%EA%B7%A3%B5%E5%BD%BA%C5%E4%BE%EE_%C7%CF%B4%DC_%B7%CE%B0%ED.png" alt="monami" />
-          </div>
-          <a href="https://bomvomsss.github.io/first_portfolio/monami/" alt="monami">바로가기</a>
-          <ul>
-            <li>2단 메뉴, 전체 메뉴</li>
-            <li>모달 팝업</li>
-            <li>동영상, 제품 탭 슬라이드</li>
-          </ul>
-        </div>
-        <div className="projectBox">
-          <div className="imgBox">
-            <img src="https://bomvomsss.github.io/first_portfolio/img/samyangLogo.png" alt="삼양"/>
-          </div>
-          <a href="https://bomvomsss.github.io/first_portfolio/samyang/" alt="삼양">바로가기</a>
-          <ul>
-            <li>2단 메뉴, 전체 메뉴</li>
-            <li>제품 탭 슬라이드</li>
-            <li>iframe 삽입</li>
-            <li>비주얼 슬라이드</li>
-          </ul>
-        </div>
-        <div className="projectBox">
-          <div className="imgBox">
-            <img src="https://bomvomsss.github.io/first_portfolio/img/phomeinLogo.png" alt="포메인"/>
-          </div>
-          <a href="http://bomvomsss.dothome.co.kr/phomein/index.html" alt="포메인">바로가기</a>
-          <ul>
-            <li>2단 메뉴, 전체 메뉴</li>
-            <li>풀페이지</li>
-            <li>메인 슬라이드 애니메이션</li>
-          </ul>
-        </div>
+        <ProjectItems
+          imgSrc="https://i.namu.wiki/i/Ia_8ko3EEuGWepIK6dW_Hkix94wpfkT1iUxGODVov0J6OuYFj-i3YYeSF7ILLJmUX55X2oLBwprCKMURJnJpxDBgHHs-42KPt0io86L7KCgpV7TThF4bN0vj4KrQt6JcymANEE_30wKueBZhzIruBg.svg"
+          imgAlt="daelim"
+          link="https://bomvomsss.github.io/first_portfolio/daelim/"
+          onClick={(e) => {
+            e.preventDefault(); // 기본 링크 이동을 막음
+            openPopup('https://bomvomsss.github.io/first_portfolio/daelim/');
+          }}
+          features={[
+            "2단 메뉴, 전체메뉴",
+            "메인 슬라이드",
+            "동영상 팝업"
+          ]}
+        />
+        <ProjectItems
+          imgSrc="https://shop-phinf.pstatic.net/20240116_126/1705391548190HN7cs_PNG/%BA%EA%B7%A3%B5%E5%BD%BA%C5%E4%BE%EE_%C7%CF%B4%DC_%B7%CE%B0%ED.png"
+          imgAlt="monami"
+          link="https://bomvomsss.github.io/first_portfolio/monami/"
+          onClick={(e) => {
+            e.preventDefault(); // 기본 링크 이동을 막음
+            openPopup('https://bomvomsss.github.io/first_portfolio/monami/');
+          }}
+          features={[
+            "2단 메뉴, 전체메뉴",
+            "모달 팝업",
+            "동영상, 제품 탭 슬라이드"
+          ]}
+        />
+        <ProjectItems
+          imgSrc="https://bomvomsss.github.io/first_portfolio/img/samyangLogo.png"
+          imgAlt="삼양"
+          link="https://bomvomsss.github.io/first_portfolio/samyang/"
+          onClick={(e) => {
+            e.preventDefault(); // 기본 링크 이동을 막음
+            openPopup('https://bomvomsss.github.io/first_portfolio/samyang/');
+          }}
+          features={[
+            "2단 메뉴, 전체메뉴",
+            "제품 탭 슬라이드",
+            "iframe 삽입",
+            "비주얼 슬라이드"
+          ]}
+        />
+        <ProjectItems
+          imgSrc="https://bomvomsss.github.io/first_portfolio/img/phomeinLogo.png"
+          imgAlt="포메인"
+          link="http://bomvomsss.dothome.co.kr/phomein/index.html"
+          onClick={(e) => {
+            e.preventDefault(); // 기본 링크 이동을 막음
+            openPopup('http://bomvomsss.dothome.co.kr/phomein/index.html');
+          }}
+          features={[
+            "2단 메뉴, 전체메뉴",
+            "풀페이지",
+            "메인 슬라이드 애니메이션"
+          ]}
+        />
       </motion.div>
       <motion.div
         transition={{ type: "spring" }}
@@ -139,29 +158,35 @@ function Project(){
         }}
       >
         <h3>Mobile</h3>
-        <div className="projectBox">
-          <div className="imgBox">
-            <img src="https://bomvomsss.github.io/first_portfolio/img/subwayLogo.png" alt="subway" />
-          </div>
-          <a href="javscript:;" onClick={()=>{openPopup('https://bomvomsss.github.io/first_portfolio/subway(mobile)/')}}>바로가기</a>
-          <ul>
-            <li>비주얼 슬라이드</li>
-            <li>모바일 사이드 메뉴</li>
-            <li>2단 메뉴</li>
-          </ul>
-        </div>
-        <div className="projectBox">
-          <div className="imgBox">
-            <img src="https://directcdn.lghellovision.net/web/images/global/hv-logo.png" alt="헬로비전" />
-          </div>
-          <a href="javscript:;" onClick={()=>{openPopup('https://bomvomsss.github.io/first_portfolio/lg(mobile)/')}}>바로가기</a>
-          <ul>
-            <li>메인비주얼 슬라이드</li>
-            <li>제품 슬라이드</li>
-            <li>모바일 사이드 메뉴</li>
-            <li>3단 메뉴</li>
-          </ul>
-        </div>    
+        <ProjectItems
+          imgSrc="https://bomvomsss.github.io/first_portfolio/img/subwayLogo.png"
+          imgAlt="subway"
+          link="https://bomvomsss.github.io/first_portfolio/subway(mobile)/"
+          onClick={(e) => {
+            e.preventDefault(); // 기본 링크 이동을 막음
+            openPopup('https://bomvomsss.github.io/first_portfolio/subway(mobile)/');
+          }}
+          features={[
+            "비주얼 슬라이드",
+            "모바일 사이드 메뉴",
+            "2단 메뉴"
+          ]}
+        />
+        <ProjectItems
+          imgSrc="https://directcdn.lghellovision.net/web/images/global/hv-logo.png"
+          imgAlt="헬로비전"
+          link="https://bomvomsss.github.io/first_portfolio/lg(mobile)/"
+          onClick={(e) => {
+            e.preventDefault(); // 기본 링크 이동을 막음
+            openPopup('https://bomvomsss.github.io/first_portfolio/lg(mobile)/');
+          }}
+          features={[
+            "메인비주얼 슬라이드",
+            "제품 슬라이드",
+            "모바일 사이드 메뉴",
+            "3단 메뉴"
+          ]}
+        />
       </motion.div>
     </div>
   )
