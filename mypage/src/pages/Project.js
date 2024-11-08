@@ -1,6 +1,7 @@
 import '../style/Project.scss';
 import { motion } from "framer-motion";
 import ProjectItems from "../components/ProjectItems";
+import PersonalProject from "../components/PersonalProject";
 
 function Project(){
   const openPopup = link => {
@@ -31,14 +32,37 @@ function Project(){
         <h2 className="tit">Project</h2>
         <span className="subtit">지속적으로 업데이트 중입니다</span>
         <strong className="miniTit">| 개인 프로젝트</strong>
-        <div className="projectBox">
-          <h4 className="icon"><a href="https://bomvomsss.github.io/todolist/" alt="todolist">To Do List<img src="https://cdn-icons-png.flaticon.com/512/7794/7794669.png" alt="" /></a></h4>
-          <ul>
-            <li>CRUD</li>
-            <li>로컬스토리지에 데이터 저장</li>
-            <li className="icon"><a href="https://github.com/bomvomsss/study/tree/main/todolist" alt="code">소스코드<img src="https://cdn-icons-png.flaticon.com/512/7794/7794669.png" alt="" /></a></li>
-          </ul>
-        </div>
+        <PersonalProject 
+          title = "TodoList"
+          link = "https://bomvomsss.github.io/todolist/"
+          code = "https://github.com/bomvomsss/study/tree/main/todolist"
+          features = {[
+            "CRUD",
+            "로컬스토리지에 데이터 저장",
+          ]}
+          onClick={
+            (e) => {
+              e.preventDefault(); // 기본 링크 이동을 막음
+              openPopup('https://github.com/bomvomsss/study/tree/main/todolist');
+            }
+          }
+        />
+        <PersonalProject 
+          title = "맛집지도"
+          link = "https://bomvomsss.github.io/projects/matjip"
+          code = "https://github.com/bomvomsss/projects/tree/main/matjip"
+          features = {[
+            "React-Bootstrap",
+            "카카오맵 API - 검색, 추가",
+            "로컬스토리지에 데이터 저장",
+          ]}
+          onClick={
+            (e) => {
+              e.preventDefault(); // 기본 링크 이동을 막음
+              openPopup('https://github.com/bomvomsss/study/tree/main/todolist');
+            }
+          }
+        />
       </motion.div>
       <motion.div
         transition={{ type: "spring" }}
@@ -91,7 +115,7 @@ function Project(){
       >
         <h3>Web</h3>
         <ProjectItems
-          imgSrc="https://i.namu.wiki/i/Ia_8ko3EEuGWepIK6dW_Hkix94wpfkT1iUxGODVov0J6OuYFj-i3YYeSF7ILLJmUX55X2oLBwprCKMURJnJpxDBgHHs-42KPt0io86L7KCgpV7TThF4bN0vj4KrQt6JcymANEE_30wKueBZhzIruBg.svg"
+          imgSrc="https://www.dlenc.co.kr/static/images/ico/ico_daelim.png"
           imgAlt="daelim"
           link="https://bomvomsss.github.io/first_portfolio/daelim/"
           onClick={(e) => {

@@ -52,22 +52,36 @@
       li{
         font-size:1.2rem;
         margin-bottom:0.5rem;
-        &.icon{
-          a{
-            font-size:1.2rem;
-          }
-        }
+        // &.icon{
+        //   a{
+        //     font-size:1.2rem;
+        //   }
+        // }
         a{
           width:5.8rem;
         }
       }
     }
     .icon{
+      width:20%;
       img{
         filter:invert(1);
         width: 1.4rem;
         margin-bottom: -0.3rem;
         margin-left: 0.2rem;
+      }
+    }
+    .per{
+      display:flex;
+      align-items: center;
+      .icon{
+        width:50%;
+      }
+      .code{
+        width:50%;
+      }
+      ul{
+        width:60%;
       }
     }
   }
