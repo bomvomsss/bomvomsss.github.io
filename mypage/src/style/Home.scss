@@ -21,7 +21,10 @@
       }
     }
     .scroll {
-      transform: scale(2, 1.7);
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: scale(1, 0.7) translateX(-50%);
       span {
         position: absolute;
         top: 0;
