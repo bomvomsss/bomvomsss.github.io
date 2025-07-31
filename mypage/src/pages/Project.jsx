@@ -1,25 +1,25 @@
-import '../style/Project.scss';
+import "../style/Project.scss";
 import { motion } from "framer-motion";
 import ProjectItems from "../components/ProjectItems";
 import PersonalProject from "../components/PersonalProject";
 
-function Project(){
-  const openPopup = link => {
+function Project() {
+  const openPopup = (link) => {
     // 팝업 window의 크기 지정
-    const width = 500; 
-    const height = 800; 
-   
+    const width = 500;
+    const height = 800;
+
     // 팝업을 부모 브라우저의 정 중앙에 나열
     const left = window.screenX + (window.outerWidth - width) / 2;
     const top = window.screenY + (window.outerHeight - height) / 2;
     const windowFeatures = `width=${width},height=${height},left=${left},top=${top}`;
-   
+
     // 팝업을 열고 window 속성 지정
-    window.open(link, 'subway', windowFeatures);
+    window.open(link, "subway", windowFeatures);
   };
 
   return (
-    <div className="wrap project">
+    <div className='wrap project'>
       <motion.div
         transition={{ type: "spring" }}
         initial={{ opacity: 0, y: 20 }}
@@ -28,40 +28,40 @@ function Project(){
           y: 0,
           transition: { delay: 0.5 },
         }}
+        className='projectItem'
       >
-        <h2 className="tit">Project</h2>
-        <span className="subtit">지속적으로 업데이트 중입니다</span>
-        <strong className="miniTit">| 개인 프로젝트</strong>
-        <PersonalProject 
-          title = "TodoList"
-          link = "https://bomvomsss.github.io/todolist/"
-          code = "https://github.com/bomvomsss/study/tree/main/todolist"
-          features = {[
+        <h2 className='tit'>Project</h2>
+        <span className='subtit'>지속적으로 업데이트 중입니다</span>
+        <strong className='miniTit'>| 개인 프로젝트</strong>
+        <PersonalProject
+          title='Task Manager'
+          link='http://nunukiki.dothome.co.kr'
+          code='https://github.com/bomvomsss/task-manager'
+          features={[
             "CRUD",
-            "로컬스토리지에 데이터 저장",
+            "Supabase를 이용한 데이터 테이블 연동",
+            "Next.js",
+            "Typescript",
+            "React-Bootstrap",
+            "드래그 앤 드롭, 카테고리 및 해시태그 설정, 날짜 지난 리스트에 경고문구 표시",
           ]}
-          onClick={
-            (e) => {
-              e.preventDefault(); // 기본 링크 이동을 막음
-              openPopup('https://github.com/bomvomsss/study/tree/main/todolist');
-            }
-          }
+          
         />
-        <PersonalProject 
-          title = "맛집지도"
-          link = "https://bomvomsss.github.io/projects/matjip"
-          code = "https://github.com/bomvomsss/projects/tree/main/matjip"
-          features = {[
+        <PersonalProject
+          title='TodoList'
+          link='https://bomvomsss.github.io/todolist/'
+          code='https://github.com/bomvomsss/study/tree/main/todolist'
+          features={["CRUD", "로컬스토리지에 데이터 저장"]}
+        />
+        <PersonalProject
+          title='맛집지도'
+          link='https://bomvomsss.github.io/projects/matjip'
+          code='https://github.com/bomvomsss/projects/tree/main/matjip'
+          features={[
             "React-Bootstrap",
             "카카오맵 API - 검색, 추가",
             "로컬스토리지에 데이터 저장",
           ]}
-          onClick={
-            (e) => {
-              e.preventDefault(); // 기본 링크 이동을 막음
-              openPopup('https://github.com/bomvomsss/study/tree/main/todolist');
-            }
-          }
         />
       </motion.div>
       <motion.div
@@ -72,6 +72,7 @@ function Project(){
           y: 0,
           transition: { delay: 0.5 },
         }}
+        className='projectItem'
       >
         <strong className="miniTit">| 클론코딩</strong>
         <h3>Responsible</h3>
@@ -213,7 +214,7 @@ function Project(){
         />
       </motion.div>
     </div>
-  )
+  );
 }
 
 export default Project;

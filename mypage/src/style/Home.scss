@@ -1,6 +1,10 @@
 @import "./mixin";
 
 .home {
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
   .main {
     height: 100vh;
     padding: 80px 0;
@@ -119,6 +123,13 @@
         height: 1.1rem;
         margin-right: 0.2rem;
       }
+      i{
+        font-style:normal;
+        font-size:0.8rem;
+        line-height:1.1rem;
+        transform:scaleX(0.6);
+        color:#E08855;
+      }
     }
   }
   .license {
@@ -176,6 +187,16 @@
           font-size: 1.1rem;
           margin-bottom: 0.3rem;
           width: 100%;
+          a {
+            font-weight: 700;
+            text-decoration: underline;
+            &.link {
+              font-size: 1.3rem;
+              svg {
+                vertical-align: bottom;
+              }
+            }
+          }
         }
       }
     }

@@ -2,6 +2,9 @@
 
 .project{
   padding-left:8rem;
+      .projectItem{
+      margin-bottom:7vh;
+    }
   strong{
     font-weight:normal;
     display:block;
@@ -147,7 +150,9 @@
         width:100%;
       }
       ul{
-        width:100%;
+        width: 90vw;
+        padding-right: 1rem;
+        box-sizing: border-box;
         li{
           font-size:1rem;
           &.icon{

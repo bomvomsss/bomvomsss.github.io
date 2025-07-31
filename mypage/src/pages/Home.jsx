@@ -2,6 +2,7 @@ import "../style/Home.scss";
 import { GroupBest, GroupNormal, GroupCan } from "../components/SkillItems";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
+import { VscSparkle, VscLink } from "react-icons/vsc";
 
 function Home() {
   return (
@@ -45,8 +46,9 @@ function Home() {
             <strong>김가영</strong> 입니다.
             <br />
             <br />
-            저는 새로운 도전에 망설임이 없고, 낯선 상황에서도{" "}
-            <strong>빠르게 적응해 최대의 성과</strong>를 내는 능력을 갖추고
+            저는 도전에 망설임이 없는 성격으로 새로운 기술이나 프로그램도 개방적으로 받아들여 현업에 적용하는 것에 능숙합니다.
+            <br/>
+            낯선 상황에서도{" "}<strong>빠르게 적응해 최대의 성과</strong>를 내는 능력을 갖추고
             있습니다. 덕분에 문제 상황에서도 신속하게 해결책을 찾아내고 이를
             적용하여 능숙히 해결해낼 수 있습니다.
           </p>
@@ -146,6 +148,78 @@ function Home() {
                   <li>
                     자주 사용하는 Php 함수 또한 함께 정리하여 작업 시간을
                     단축하였습니다.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </motion.div>
+      <motion.div
+        transition={{ type: "spring" }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 0.5 },
+        }}
+      >
+        <div className='career'>
+          <div className='licenseBox'>
+            <p>
+              넷트루 컨설팅 그룹 <i>(NCG)</i>
+              <span>2024.11 - </span>
+            </p>
+            <ol>
+              <li>
+                웹접근성 인증마크 획득
+                <ul>
+                  <li>
+                    <a
+                      target='_blank'
+                      title='미래에셋 자산운용 새창으로'
+                      href='https://investments.miraeasset.com/index.do'
+                    >
+                      미래에셋 자산운용
+                    </a>
+                    의 전체 페이지에 대하여 웹접근성에 맞게 수정·보완 작업을 통해
+                    웹접근성 인증 마크를 획득했습니다.&nbsp;
+                    <a
+                      className='link'
+                      target='_blank'
+                      title='미래에셋 자산운용 웹접근성 인증마크 새창으로'
+                      href='https://investments.miraeasset.com/assets/file/web_accessibility_miraeasset.pdf'
+                    >
+                      <VscLink />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                유지보수 및 페이지 개선
+                <ul>
+                  <li>
+                    클라이언트의 요청에 따라 페이지 내 필요 기능들을 추가하고,
+                    유지보수 작업을 진행했습니다.
+                    <br />
+                    <br />
+                    <span>
+                      <VscSparkle /> 담당 페이지
+                    </span>
+                    <ul className='flexBox'>
+                      <li>미래에셋 자산운용</li>
+                      <li>TIGER ETF (KO/EN)</li>
+                      <li>미래에셋 컨설팅</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                미래에셋자산운용, TIGER ETF 페이지 통합 프로젝트
+                <ul>
+                  <li>
+                    <strong>프론트엔드</strong> 포지션으로 미래에셋의 자산운용과 TIGER ETF
+                    페이지의 디자인 및 인증 통합프로젝트에 참여했습니다.
                   </li>
                 </ul>
               </li>
