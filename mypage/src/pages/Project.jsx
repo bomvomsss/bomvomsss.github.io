@@ -34,6 +34,14 @@ function Project() {
         <span className='subtit'>지속적으로 업데이트 중입니다</span>
         <strong className='miniTit'>| 개인 프로젝트</strong>
         <PersonalProject
+          title='랜덤 메뉴 고르기'
+          link='https://bomvomsss.github.io/random-menu/'
+          code='https://github.com/bomvomsss/random-menu'
+          features={[
+            "json 파일로 데이터 불러오기",
+            "간단한 게임 형식"
+          ]}/>
+        <PersonalProject
           title='Task Manager'
           link='http://nunukiki.dothome.co.kr'
           code='https://github.com/bomvomsss/task-manager'
@@ -45,7 +53,6 @@ function Project() {
             "React-Bootstrap",
             "드래그 앤 드롭, 카테고리 및 해시태그 설정, 날짜 지난 리스트에 경고문구 표시",
           ]}
-          
         />
         <PersonalProject
           title='TodoList'
