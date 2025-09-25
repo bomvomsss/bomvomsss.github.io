@@ -34,6 +34,18 @@ function Project() {
         <span className='subtit'>지속적으로 업데이트 중입니다</span>
         <strong className='miniTit'>| 개인 프로젝트</strong>
         <PersonalProject
+          title='돌돌도감'
+          link='https://bomvomsss.github.io/dollcollector/'
+          code='https://github.com/bomvomsss/dollcollector'
+          features={[
+            "아이돌 인형 아카이빙 사이트",
+            "검색 기능",
+            "가나다 순 정렬 기능",
+            "React",
+            "Typescript",
+            "JSON 파일로 데이터 관리"
+          ]}/>
+        <PersonalProject
           title='랜덤 메뉴 고르기'
           link='https://bomvomsss.github.io/random-menu/'
           code='https://github.com/bomvomsss/random-menu'
